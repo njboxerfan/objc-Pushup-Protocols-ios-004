@@ -10,6 +10,8 @@
 #import "StatsViewController.h"
 #import "FISWorkout.h"
 #import "FISExercise.h"
+#import "AddExerciseViewController.h"
+
 @interface AddEntryViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *exerciseTableView;

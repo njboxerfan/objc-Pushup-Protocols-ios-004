@@ -10,7 +10,6 @@
 
 @class StatsViewController;
 @class FISWorkout;
-#import "AddExerciseViewController.h"
 
 @interface AddEntryViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
