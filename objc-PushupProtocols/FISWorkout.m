@@ -11,7 +11,7 @@
 
 @implementation FISWorkout
 
--(instancetype)initWithExercise:(FISExercise *)exercise Reps:(NSNumber *)reps sets:(NSNumber *)sets numberOfWorkoutBuddies:(NSNumber *)workoutBuddies timeStamp:(NSDate *)timestamp {
+-(instancetype)initWithExercise:(FISExercise *)exercise Reps:(NSNumber *)reps Sets:(NSNumber *)sets NumberOfWorkoutBuddies:(NSNumber *)workoutBuddies TimeStamp:(NSDate *)timestamp {
     
     self = [super init];
     if (self) {
