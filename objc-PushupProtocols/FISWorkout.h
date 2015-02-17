@@ -18,7 +18,6 @@
 @property (strong, nonatomic) NSDate* computedDate;
 @property (strong, nonatomic) FISExercise *exercise;
 
-- (instancetype)init;
--(instancetype)initWithExercise:(FISExercise *)exercise Reps:(NSNumber *)reps Sets:(NSNumber *)sets NumberOfWorkoutBuddies:(NSNumber *)WorkoutBuddies timeStamp:(NSDate *)Timestamp;
+-(instancetype)initWithExercise:(FISExercise *)exercise Reps:(NSNumber *)reps Sets:(NSNumber *)sets NumberOfWorkoutBuddies:(NSNumber *)WorkoutBuddies TimeStamp:(NSDate *)timestamp;
 
 @end

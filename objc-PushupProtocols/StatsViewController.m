@@ -9,8 +9,6 @@
 #import "StatsViewController.h"
 #import "FISWorkout.h"
 #import "FISExercise.h"
-#import "AddEntryViewController.h"
-#import "AddExerciseViewController.h"
 
 @interface StatsViewController ()
 
