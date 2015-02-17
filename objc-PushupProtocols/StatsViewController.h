@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddEntryViewController.h"
+#import "AddExerciseViewController.h"
 
-@interface StatsViewController : UIViewController
+@interface StatsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
-
-
+@property (strong, nonatomic) NSMutableArray *exercises;
 
 @end
 

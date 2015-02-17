@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEntryViewController : UIViewController
+@class StatsViewController;
+@class FISWorkout;
+#import "AddExerciseViewController.h"
 
-@property (weak, nonatomic) IBOutlet UITextField *numberOfPushupsTextField;
-@property (weak, nonatomic) IBOutlet UIPickerView *timePicker;
-@property (weak, nonatomic) IBOutlet UIPickerView *datePicker;
+@interface AddEntryViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *numberOfExerciseTextField;
+@property (weak, nonatomic) IBOutlet UITextField *numberOfSetsTextField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextField *numberOfStudentsTextField;
 
 @end

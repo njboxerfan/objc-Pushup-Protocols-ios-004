@@ -13,8 +13,10 @@
 		3134AEF31A8D12A300BF61A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3134AEF11A8D12A300BF61A5 /* Main.storyboard */; };
 		3134AEF51A8D12A300BF61A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3134AEF41A8D12A300BF61A5 /* Images.xcassets */; };
 		3134AEF81A8D12A300BF61A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3134AEF61A8D12A300BF61A5 /* LaunchScreen.xib */; };
-		3134AF041A8D12A300BF61A5 /* objc_PushupProtocolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3134AF031A8D12A300BF61A5 /* objc_PushupProtocolsTests.m */; };
 		3134AF121A8D3E8D00BF61A5 /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3134AF111A8D3E8D00BF61A5 /* AddEntryViewController.m */; };
+		3134AF151A8D44F400BF61A5 /* FISWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3134AF141A8D44F400BF61A5 /* FISWorkout.m */; };
+		3134AF181A8E5D8100BF61A5 /* FISExercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 3134AF171A8E5D8100BF61A5 /* FISExercise.m */; };
+		3134AF1B1A8E636600BF61A5 /* AddExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3134AF1A1A8E636600BF61A5 /* AddExerciseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +42,14 @@
 		3134AEF71A8D12A300BF61A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3134AEFD1A8D12A300BF61A5 /* objc-PushupProtocolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "objc-PushupProtocolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3134AF021A8D12A300BF61A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3134AF031A8D12A300BF61A5 /* objc_PushupProtocolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_PushupProtocolsTests.m; sourceTree = "<group>"; };
 		3134AF101A8D3E8D00BF61A5 /* AddEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEntryViewController.h; sourceTree = "<group>"; };
 		3134AF111A8D3E8D00BF61A5 /* AddEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEntryViewController.m; sourceTree = "<group>"; };
+		3134AF131A8D44F400BF61A5 /* FISWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISWorkout.h; sourceTree = "<group>"; };
+		3134AF141A8D44F400BF61A5 /* FISWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISWorkout.m; sourceTree = "<group>"; };
+		3134AF161A8E5D8100BF61A5 /* FISExercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISExercise.h; sourceTree = "<group>"; };
+		3134AF171A8E5D8100BF61A5 /* FISExercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISExercise.m; sourceTree = "<group>"; };
+		3134AF191A8E636600BF61A5 /* AddExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExerciseViewController.h; sourceTree = "<group>"; };
+		3134AF1A1A8E636600BF61A5 /* AddExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExerciseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +93,16 @@
 			children = (
 				3134AEEB1A8D12A300BF61A5 /* AppDelegate.h */,
 				3134AEEC1A8D12A300BF61A5 /* AppDelegate.m */,
+				3134AF131A8D44F400BF61A5 /* FISWorkout.h */,
+				3134AF141A8D44F400BF61A5 /* FISWorkout.m */,
+				3134AF161A8E5D8100BF61A5 /* FISExercise.h */,
+				3134AF171A8E5D8100BF61A5 /* FISExercise.m */,
 				3134AEEE1A8D12A300BF61A5 /* StatsViewController.h */,
 				3134AEEF1A8D12A300BF61A5 /* StatsViewController.m */,
 				3134AF101A8D3E8D00BF61A5 /* AddEntryViewController.h */,
 				3134AF111A8D3E8D00BF61A5 /* AddEntryViewController.m */,
+				3134AF191A8E636600BF61A5 /* AddExerciseViewController.h */,
+				3134AF1A1A8E636600BF61A5 /* AddExerciseViewController.m */,
 				3134AEF11A8D12A300BF61A5 /* Main.storyboard */,
 				3134AEF41A8D12A300BF61A5 /* Images.xcassets */,
 				3134AEF61A8D12A300BF61A5 /* LaunchScreen.xib */,
@@ -110,7 +123,6 @@
 		3134AF001A8D12A300BF61A5 /* objc-PushupProtocolsTests */ = {
 			isa = PBXGroup;
 			children = (
-				3134AF031A8D12A300BF61A5 /* objc_PushupProtocolsTests.m */,
 				3134AF011A8D12A300BF61A5 /* Supporting Files */,
 			);
 			path = "objc-PushupProtocolsTests";
@@ -226,6 +238,9 @@
 			files = (
 				3134AEF01A8D12A300BF61A5 /* StatsViewController.m in Sources */,
 				3134AF121A8D3E8D00BF61A5 /* AddEntryViewController.m in Sources */,
+				3134AF181A8E5D8100BF61A5 /* FISExercise.m in Sources */,
+				3134AF1B1A8E636600BF61A5 /* AddExerciseViewController.m in Sources */,
+				3134AF151A8D44F400BF61A5 /* FISWorkout.m in Sources */,
 				3134AEED1A8D12A300BF61A5 /* AppDelegate.m in Sources */,
 				3134AEEA1A8D12A300BF61A5 /* main.m in Sources */,
 			);
@@ -235,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3134AF041A8D12A300BF61A5 /* objc_PushupProtocolsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
