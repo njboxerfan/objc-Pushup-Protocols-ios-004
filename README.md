@@ -9,7 +9,7 @@ Pushup Protocols
 ### Goals 
 - Send data back through an app using custom protocols with delegates. 
 - Get some practice with reading other people's code
-- Learn about Key Value Collection Operators (Advanced)
+- Learn about Key Value Collection Operators
 
 ### Objective 
 
@@ -24,3 +24,8 @@ Pushup Protocols
 
 - No tests for this one,  but if you want to do it correctly, you will not use unwind segues, NSNotificationCenter, or blocks to pass data around (to the extent you are already familiar with some or all of these methods.) You will also not have any singleton objects in your program.
 
+## Hints
+
+- There are a couple of errors that the fellow programmer has left in the program that you may want to deal with along the way that have nothing to do with custom delegate / protocols. However, none of them are required to be fixed to make the program work under "ideal" conditions.
+
+- Also, don't forget to take a look at how the methods to get the statistics work! While we won't lecture on KVC Collection Operators, they can be quite a nice quick win!
