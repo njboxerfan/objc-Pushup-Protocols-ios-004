@@ -16,6 +16,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *exerciseTableView;
 @property (strong, nonatomic) NSMutableArray *exercises;
 
+@property (nonatomic) NSInteger selectedRow;
+
+- (IBAction)cancelTapped:(id)sender;
+- (IBAction)saveWorkoutTapped:(id)sender;
+
 @end
 
 @implementation AddEntryViewController
@@ -28,7 +33,8 @@
     self.numberOfStudentsTextField.delegate = self;
     self.exerciseTableView.delegate = self;
     self.exerciseTableView.dataSource = self;
-    // Do any additional setup after loading the view.
+
+    self.selectedRow = 1;
 }
 
 -(NSMutableArray *)exercises {
@@ -47,6 +53,30 @@
     return _exercises;
 }
 
+-(void)addExercise:(FISExercise *)exercise
+{
+    [self.exercises addObject:exercise];
+}
+
+- (IBAction)cancelTapped:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)saveWorkoutTapped:(id)sender
+{
+    FISWorkout *workout = [[FISWorkout alloc] initWithExercise:self.exercises[self.selectedRow]
+                                                          Reps:@([self.numberOfExerciseTextField.text integerValue])
+                                                          Sets:@([self.numberOfSetsTextField.text integerValue])
+                                        NumberOfWorkoutBuddies:@([self.numberOfStudentsTextField.text integerValue])
+                                                     TimeStamp:self.datePicker.date];
+    
+    [self.myDelegate addWorkout:workout];
+    [self.myDelegate updateUI];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
@@ -62,6 +92,14 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ( indexPath.row != 0 )
+    {
+        self.selectedRow = indexPath.row;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -98,4 +136,10 @@
     return NO;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AddExerciseViewController *addExerciseVC = segue.destinationViewController;
+    
+    addExerciseVC.myDelegate = self;
+}
 @end

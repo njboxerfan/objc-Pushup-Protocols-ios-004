@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddEntryViewController.h"
 
-@interface StatsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface StatsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, AddEntryDelegate>
 
 @property (strong, nonatomic) NSMutableArray *exercises;
+
+-(void)addWorkout:(FISWorkout *)workout;
 
 @end
 

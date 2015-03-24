@@ -11,6 +11,9 @@
 
 @interface AddExerciseViewController ()
 
+- (IBAction)cancelTapped:(id)sender;
+- (IBAction)newExerciseTapped:(id)sender;
+
 @property (strong, nonatomic) NSMutableArray *muscleGroups;
 @end
 
@@ -28,6 +31,27 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)cancelTapped:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)newExerciseTapped:(id)sender
+{
+    FISExercise *exercise = [[FISExercise alloc] initWithName:self.exerciseName.text];
+    
+    NSString *muscleGroup = [self pickerView:self.exercisePicker titleForRow:[self.exercisePicker selectedRowInComponent:0] forComponent:0];
+    
+    exercise.muscleGroups = [[NSMutableArray alloc] init];
+    
+    [exercise.muscleGroups addObject:muscleGroup];
+    
+    [self.myDelegate addExercise:exercise];
+    [self.myDelegate updateUI];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(NSMutableArray *)muscleGroups {

@@ -7,15 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddExerciseViewController.h"
 
 @class StatsViewController;
 @class FISWorkout;
 
-@interface AddEntryViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
+@protocol AddEntryDelegate <NSObject>
+
+-(void)addWorkout:(FISWorkout *)workout;
+- (void)updateUI;
+
+@end
+
+@interface AddEntryViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, AddExerciseDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *numberOfExerciseTextField;
 @property (weak, nonatomic) IBOutlet UITextField *numberOfSetsTextField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextField *numberOfStudentsTextField;
+
+@property (strong, nonatomic) id<AddEntryDelegate> myDelegate;
 
 @end

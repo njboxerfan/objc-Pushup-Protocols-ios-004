@@ -44,6 +44,11 @@
     
 }
 
+-(void)addWorkout:(FISWorkout *)workout
+{
+    [self.workouts addObject:workout];
+}
+
 -(NSMutableArray *)exercises {
     if (!_exercises) {
         FISExercise *pushups = [[FISExercise alloc] initWithName:@"Pushups"];
@@ -138,6 +143,13 @@
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     [self updateUI];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AddEntryViewController *addEntryVC = segue.destinationViewController;
+
+    addEntryVC.myDelegate = self;
 }
 
 @end
